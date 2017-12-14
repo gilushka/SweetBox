@@ -3,10 +3,10 @@ package Sweets;
 /**
  * Created by user on 14.12.2017.
  */
-public class Candy extends Sweet {
-    public Candy(){}
+public class Cake extends Sweet {
+    public Cake(){}
 
-    public Candy(String sName, float fCost, int iWeight){
+    public Cake(String sName, float fCost, int iWeight){
         super(sName, fCost, iWeight);
     }
 
