@@ -11,6 +11,6 @@ public class Candy extends Sweet {
     }
 
     public String description(){
-        return "Конфета - " + sName + ". Веса в ней: " + fWeight + ". А стоит она: " + iCost + " рублей";
+        return "Конфета - " + sName + ". Веса в ней: " + fWeight + " кг. А стоит она: " + iCost + " рублей";
     }
 }

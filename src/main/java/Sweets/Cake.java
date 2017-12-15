@@ -11,6 +11,6 @@ public class Cake extends Sweet {
     }
 
     public String description(){
-        return "Пироженка - " + sName + ". Веса в ней: " + fWeight + ". А стоит она: " + iCost + " рублей";
+        return "Пироженка - " + sName + ". Веса в ней: " + fWeight + " кг. А стоит она: " + iCost + " рублей";
     }
 }

@@ -8,8 +8,8 @@ import Sweets.Sweet;
  * сеттеры? Конструкция sweet.getiWeight будет работать?
  */
 public class GiftBox {
-    private int iTotalWeight = 0; // Общий вес
-    private float fTotalCost = 0;  // Общая цена
+    private float fTotalWeight = 0; // Общий вес
+    private int iTotalCost = 0;  // Общая цена
     Sweet[] swArray = new Sweet[0]; // Массив в котором хранятся вкусняшки
 
     public void addItem(Sweet sweet){
@@ -20,8 +20,8 @@ public class GiftBox {
         }
         swNewArray[iLen] = sweet; // Добавляем в конец новую сладость
         swArray = swNewArray; // Присваиваем переменной swArray ссылку на новый созданный массив длинной +1 элемент
-        iTotalWeight += sweet.fWeight;
-        fTotalCost += sweet.iCost;
+        fTotalWeight += sweet.fWeight;
+        iTotalCost += sweet.iCost;
     }
 
     public void printItems(){
@@ -30,12 +30,12 @@ public class GiftBox {
         }
     }
 
-    public int getiTotalWeight() {
-        return iTotalWeight;
+    public float getiTotalWeight() {
+        return fTotalWeight;
     }
 
-    public float getfTotalCost() {
-        return fTotalCost;
+    public int getfTotalCost() {
+        return iTotalCost;
     }
 
     public int getiItemCount(){
