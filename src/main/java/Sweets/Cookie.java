@@ -1,7 +1,7 @@
 package Sweets;
 
 /**
- * Created by user on 15.12.2017.
+ * Класс печеньки
  */
 public class Cookie extends Sweet {
     public Cookie(){}
@@ -11,6 +11,6 @@ public class Cookie extends Sweet {
     }
 
     public String description(){
-        return "Печенька - " + sName + ". Веса в ней: " + fWeight + " кг. А стоит она: " + iCost + " рублей";
+        return "Печенька - " + getsName() + ". Веса в ней: " + getfWeight() + " кг. А стоит она: " + getiCost() + " рублей";
     }
 }

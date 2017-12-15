@@ -3,9 +3,7 @@ package Present;
 import Sweets.Sweet;
 
 /**
- * Класс формирования подарка. Даннвый класс вынесен в отдельную папку и для того, чтобы можно было получить доступ к переменным
- * класса Sweet их пришлось сделать публичными. Имеет ли это смысл или оставить их private а доступ осуществлять через геттеры и
- * сеттеры? Конструкция sweet.getiWeight будет работать?
+ * Класс формирования подарка.
  */
 public class GiftBox {
     private float fTotalWeight = 0; // Общий вес
@@ -20,13 +18,13 @@ public class GiftBox {
         }
         swNewArray[iLen] = sweet; // Добавляем в конец новую сладость
         swArray = swNewArray; // Присваиваем переменной swArray ссылку на новый созданный массив длинной +1 элемент
-        fTotalWeight += sweet.fWeight;
-        iTotalCost += sweet.iCost;
+        fTotalWeight += sweet.getfWeight();
+        iTotalCost += sweet.getiCost();
     }
 
     public void printItems(){
-        for (int i = 0; i < swArray.length; i++) {
-            System.out.println(swArray[i].description());
+        for (Sweet aSwArray : swArray) {
+            System.out.println(aSwArray.description());
         }
     }
 

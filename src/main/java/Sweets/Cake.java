@@ -1,7 +1,7 @@
 package Sweets;
 
 /**
- * Created by user on 14.12.2017.
+ * Класс пироженки
  */
 public class Cake extends Sweet {
     public Cake(){}
@@ -11,6 +11,6 @@ public class Cake extends Sweet {
     }
 
     public String description(){
-        return "Пироженка - " + sName + ". Веса в ней: " + fWeight + " кг. А стоит она: " + iCost + " рублей";
+        return "Пироженка - " + getsName() + ". Веса в ней: " + getfWeight() + " кг. А стоит она: " + getiCost() + " рублей";
     }
 }

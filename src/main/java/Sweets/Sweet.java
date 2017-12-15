@@ -4,9 +4,9 @@ package Sweets;
  * Родительский класс сладостей
  */
 public abstract class Sweet {
-    public String sName;
-    public int iCost;
-    public float fWeight;
+    private String sName;
+    private int iCost;
+    private float fWeight;
     public Sweet() {}
 
     public Sweet(String sName, int iCost, float fWeight){

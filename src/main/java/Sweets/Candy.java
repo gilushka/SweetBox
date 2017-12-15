@@ -1,7 +1,7 @@
 package Sweets;
 
 /**
- * Created by user on 14.12.2017.
+ * Класс конфетки
  */
 public class Candy extends Sweet {
     public Candy(){}
@@ -11,6 +11,6 @@ public class Candy extends Sweet {
     }
 
     public String description(){
-        return "Конфета - " + sName + ". Веса в ней: " + fWeight + " кг. А стоит она: " + iCost + " рублей";
+        return "Конфета - " + getsName() + ". Веса в ней: " + getfWeight() + " кг. А стоит она: " + getiCost() + " рублей";
     }
 }
