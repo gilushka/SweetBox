@@ -26,7 +26,19 @@ public class GiftBox {
 
     public void printItems(){
         for (int i = 0; i < swArray.length; i++) {
-            System.out.println(swArray[i].);
+            System.out.println(swArray[i].description());
         }
+    }
+
+    public int getiTotalWeight() {
+        return iTotalWeight;
+    }
+
+    public float getfTotalCost() {
+        return fTotalCost;
+    }
+
+    public int getiItemCount(){
+        return swArray.length;
     }
 }
