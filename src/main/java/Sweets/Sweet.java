@@ -1,12 +1,12 @@
 package Sweets;
 
 /**
- * Created by user on 14.12.2017.
+ * Родительский класс сладостей
  */
 public abstract class Sweet {
-    String sName;
-    float fCost;
-    int iWeight;
+    public String sName;
+    public float fCost;
+    public int iWeight;
     public Sweet() {}
 
     public Sweet(String sName, float fCost, int iWeight){
@@ -38,4 +38,6 @@ public abstract class Sweet {
     public void setiWeight(int iWeight) {
         this.iWeight = iWeight;
     }
+
+    public abstract String description();
 }

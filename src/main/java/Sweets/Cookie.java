@@ -11,6 +11,6 @@ public class Cookie extends Sweet {
     }
 
     public String description(){
-        return "Пироженка - " + sName + ". Веса в ней: " + iWeight + ". А стоит она: " + fCost + " рублей";
+        return "Печенька - " + sName + ". Веса в ней: " + iWeight + ". А стоит она: " + fCost + " рублей";
     }
 }
