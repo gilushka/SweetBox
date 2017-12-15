@@ -1,12 +1,12 @@
 package Sweets;
 
 /**
- * Created by user on 14.12.2017.
+ * Created by user on 15.12.2017.
  */
-public class Cake extends Sweet {
-    public Cake(){}
+public class Cookie extends Sweet {
+    public Cookie(){}
 
-    public Cake(String sName, float fCost, int iWeight){
+    public Cookie(String sName, float fCost, int iWeight){
         super(sName, fCost, iWeight);
     }
 
