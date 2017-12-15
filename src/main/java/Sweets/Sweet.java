@@ -19,7 +19,10 @@ public abstract class Sweet {
         return sName;
     }
 
-    public void setsName(String sName) {
+    public void setsName(String sName) throws Exception {
+        if (sName.equals(null)){
+            throw new Exception("Вы не указали название");
+        }
         this.sName = sName;
     }
 
@@ -27,7 +30,10 @@ public abstract class Sweet {
         return iCost;
     }
 
-    public void setiCost(int iCost) {
+    public void setiCost(int iCost) throws Exception {
+        if (iCost < 0){
+            throw new Exception("Цена не может быть отрицательной");
+        }
         this.iCost = iCost;
     }
 
@@ -35,7 +41,10 @@ public abstract class Sweet {
         return fWeight;
     }
 
-    public void setfWeight(float fWeight) {
+    public void setfWeight(float fWeight) throws Exception {
+        if (fWeight <= 0){
+            throw new Exception("Вес должен быть больше нуля");
+        }
         this.fWeight = fWeight;
     }
 
