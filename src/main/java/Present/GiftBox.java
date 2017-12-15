@@ -10,9 +10,6 @@ public class GiftBox {
     private int iTotalCost = 0;  // Общая цена
     Sweet[] swArray = new Sweet[0]; // Массив в котором хранятся вкусняшки
 
-    /**
-     * Добавление сладости в конец
-     */
     public void addItem(Sweet sweet){
         int iLen = swArray.length; // Длинна существующего массива вкусняшек
         Sweet[] swNewArray = new Sweet[iLen+1]; // Новый массив на +1 количество сладостей
@@ -61,8 +58,7 @@ public class GiftBox {
     }
 
     public void printItems(){
-        for (int i = 0; i < swArray.length; i++) {
-            Sweet aSwArray = swArray[i];
+        for (Sweet aSwArray : swArray) {
             System.out.println(aSwArray.description());
         }
     }
