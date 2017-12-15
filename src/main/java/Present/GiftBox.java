@@ -54,8 +54,8 @@ public class GiftBox {
         for (int i = 0; i < iInd-1; i++) {
             swNewArray[i] = swArray[i]; // Копируем сладости в новый массив
         }
-        for (int i = iInd; i < iLen-1; i++) {
-            swNewArray[i-1] = swArray[i]; // Копируем сладости в новый массив
+        for (int i = iInd-1; i < iLen-1; i++) {
+            swNewArray[i] = swArray[i]; // Копируем сладости в новый массив
         }
         swArray = swNewArray; // Присваиваем переменной swArray ссылку на новый созданный массив длинной +1 элемент
     }
