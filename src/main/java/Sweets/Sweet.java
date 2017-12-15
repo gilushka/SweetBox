@@ -19,10 +19,7 @@ public abstract class Sweet {
         return sName;
     }
 
-    public void setsName(String sName) throws Exception {
-        if (sName.equals(null)){
-            throw new Exception("Вы не указали название");
-        }
+    public void setsName(String sName){
         this.sName = sName;
     }
 

@@ -10,6 +10,9 @@ public class GiftBox {
     private int iTotalCost = 0;  // Общая цена
     Sweet[] swArray = new Sweet[0]; // Массив в котором хранятся вкусняшки
 
+    /**
+     * Добавление сладости в конец
+     */
     public void addItem(Sweet sweet){
         int iLen = swArray.length; // Длинна существующего массива вкусняшек
         Sweet[] swNewArray = new Sweet[iLen+1]; // Новый массив на +1 количество сладостей
@@ -22,8 +25,44 @@ public class GiftBox {
         iTotalCost += sweet.getiCost();
     }
 
+    /**
+     * Добавление сладости в середину по индексу
+     */
+    public void addItemInd(Sweet sweet, int iInd){
+        int iLen = swArray.length; // Длинна существующего массива вкусняшек
+        Sweet[] swNewArray = new Sweet[iLen+1]; // Новый массив на +1 количество сладостей
+        for (int i = 0; i < iInd-1; i++) {
+            swNewArray[i] = swArray[i]; // Копируем сладости в новый массив
+        }
+        swNewArray[iInd-1] = sweet; // Добавляем по индексу новую сладость
+        for (int i = iInd; i < iLen+1; i++) {
+            swNewArray[i] = swArray[i]; // Копируем вторую часть старого массива в новый
+        }
+        swArray = swNewArray; // Присваиваем переменной swArray ссылку на новый созданный массив длинной +1 элемент
+        fTotalWeight += sweet.getfWeight();
+        iTotalCost += sweet.getiCost();
+    }
+
+    /**
+     * Удаление сладости по индексу
+     */
+    public void delItemInd(int iInd){
+        int iLen = swArray.length; // Длинна существующего массива вкусняшек
+        fTotalWeight -= swArray[iInd].getfWeight();
+        iTotalCost -= swArray[iInd].getiCost();
+        Sweet[] swNewArray = new Sweet[iLen-1]; // Новый массив на +1 количество сладостей
+        for (int i = 0; i < iInd-1; i++) {
+            swNewArray[i] = swArray[i]; // Копируем сладости в новый массив
+        }
+        for (int i = iInd; i < iLen-1; i++) {
+            swNewArray[i-1] = swArray[i]; // Копируем сладости в новый массив
+        }
+        swArray = swNewArray; // Присваиваем переменной swArray ссылку на новый созданный массив длинной +1 элемент
+    }
+
     public void printItems(){
-        for (Sweet aSwArray : swArray) {
+        for (int i = 0; i < swArray.length; i++) {
+            Sweet aSwArray = swArray[i];
             System.out.println(aSwArray.description());
         }
     }
