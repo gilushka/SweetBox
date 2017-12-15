@@ -6,11 +6,11 @@ package Sweets;
 public class Candy extends Sweet {
     public Candy(){}
 
-    public Candy(String sName, float fCost, int iWeight){
-        super(sName, fCost, iWeight);
+    public Candy(String sName, int iCost, float fWeight){
+        super(sName, iCost, fWeight);
     }
 
     public String description(){
-        return "Конфета - " + sName + ". Веса в ней: " + iWeight + ". А стоит она: " + fCost + " рублей";
+        return "Конфета - " + sName + ". Веса в ней: " + fWeight + ". А стоит она: " + iCost + " рублей";
     }
 }

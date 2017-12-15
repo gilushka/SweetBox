@@ -5,14 +5,14 @@ package Sweets;
  */
 public abstract class Sweet {
     public String sName;
-    public float fCost;
-    public int iWeight;
+    public int iCost;
+    public float fWeight;
     public Sweet() {}
 
-    public Sweet(String sName, float fCost, int iWeight){
+    public Sweet(String sName, int iCost, float fWeight){
         this.sName = sName;
-        this.fCost = fCost;
-        this.iWeight = iWeight;
+        this.iCost = iCost;
+        this.fWeight = fWeight;
     }
 
     public String getsName() {
@@ -23,20 +23,20 @@ public abstract class Sweet {
         this.sName = sName;
     }
 
-    public float getfCost() {
-        return fCost;
+    public int getiCost() {
+        return iCost;
     }
 
-    public void setfCost(float fCost) {
-        this.fCost = fCost;
+    public void setiCost(int iCost) {
+        this.iCost = iCost;
     }
 
-    public int getiWeight() {
-        return iWeight;
+    public float getfWeight() {
+        return fWeight;
     }
 
-    public void setiWeight(int iWeight) {
-        this.iWeight = iWeight;
+    public void setfWeight(float fWeight) {
+        this.fWeight = fWeight;
     }
 
     public abstract String description();

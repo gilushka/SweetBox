@@ -20,8 +20,8 @@ public class GiftBox {
         }
         swNewArray[iLen] = sweet; // Добавляем в конец новую сладость
         swArray = swNewArray; // Присваиваем переменной swArray ссылку на новый созданный массив длинной +1 элемент
-        iTotalWeight += sweet.iWeight;
-        fTotalCost += sweet.fCost;
+        iTotalWeight += sweet.fWeight;
+        fTotalCost += sweet.iCost;
     }
 
     public void printItems(){
