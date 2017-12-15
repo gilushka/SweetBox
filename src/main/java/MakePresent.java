@@ -13,9 +13,7 @@ public class MakePresent {
         box.addItem(new Candy("Алёнка", 60, 0.100f));
         box.addItem(new Cookie("Юбелейное", 30, 0.150f));
         box.addItem(new Candy("Халва в шоколаде", 100, 0.200f));
-        box.printItems();
         box.addItemInd(new Candy("Гусиные лапки", 175, 1.0f), 3);
-        box.printItems();
         box.delItemInd(2);
         box.printItems();
         System.out.println("Общий вес подарка: " + box.getiTotalWeight() + " кг. Стоимость: " + box.getfTotalCost() + " рублей. В подарке " + box.getiItemCount() + " сладостей.");
