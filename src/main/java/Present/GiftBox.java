@@ -40,6 +40,8 @@ public class GiftBox {
         iTotalCost += sweet.getiCost();
     }
 
+
+
     /**
      * Удаление сладости по индексу
      */
@@ -47,6 +49,7 @@ public class GiftBox {
         int iLen = swArray.length; // Длинна существующего массива вкусняшек
         fTotalWeight -= swArray[iInd-1].getfWeight();
         iTotalCost -= swArray[iInd-1].getiCost();
+
         Sweet[] swNewArray = new Sweet[iLen-1]; // Новый массив на +1 количество сладостей
         for (int i = 0; i < iInd-1; i++) {
             swNewArray[i] = swArray[i]; // Копируем сладости в новый массив
@@ -63,15 +66,23 @@ public class GiftBox {
         }
     }
 
-    public float getiTotalWeight() {
+    public float getfTotalWeight() {
         return fTotalWeight;
     }
 
-    public int getfTotalCost() {
+    public int getiTotalCost() {
         return iTotalCost;
     }
 
     public int getiItemCount(){
         return swArray.length;
+    }
+
+    public Sweet[] getSwArray() {
+        return swArray;
+    }
+
+    public int getSwArrayElementCost(int i) {
+        return swArray[i-1].getiCost();
     }
 }

@@ -16,6 +16,6 @@ public class MakePresent {
         box.addItemInd(new Candy("Гусиные лапки", 175, 1.0f), 3);
         box.delItemInd(2);
         box.printItems();
-        System.out.println("Общий вес подарка: " + box.getiTotalWeight() + " кг. Стоимость: " + box.getfTotalCost() + " рублей. В подарке " + box.getiItemCount() + " сладостей.");
+        System.out.println("Общий вес подарка: " + box.getfTotalWeight() + " кг. Стоимость: " + box.getiTotalCost() + " рублей. В подарке " + box.getiItemCount() + " сладостей.");
     }
 }
