@@ -17,5 +17,6 @@ public class MakePresent {
         box.delItemInd(2);
         box.printItems();
         System.out.println("Общий вес подарка: " + box.getfTotalWeight() + " кг. Стоимость: " + box.getiTotalCost() + " рублей. В подарке " + box.getiItemCount() + " сладостей.");
+        box.reportToFile(box);
     }
 }

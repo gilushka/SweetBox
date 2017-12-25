@@ -2,6 +2,10 @@ package Present;
 
 import Sweets.Sweet;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.LinkedList;
 
 /**
@@ -84,11 +88,26 @@ public class GiftBox {
         return list.size();
     }
 
-    public LinkedList<Sweet> getSwArray() {
-        return list;
+    public Sweet getSwItem(int i) {
+        return list.get(i);
     }
 
     public int getSwArrayElementCost(int i) {
         return list.get(i-1).getiCost();
+    }
+
+    public void reportToFile(GiftBox box){
+        File file = new File("Report.txt");
+        try{
+            BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+            for (int i = 0; i < list.size(); i++) {
+                writer.write(box.getSwItem(i).description());
+            }
+            writer.close();
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
     }
 }
