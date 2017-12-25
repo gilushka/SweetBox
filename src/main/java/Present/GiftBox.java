@@ -101,7 +101,7 @@ public class GiftBox {
         try{
             BufferedWriter writer = new BufferedWriter(new FileWriter(file));
             for (int i = 0; i < list.size(); i++) {
-                writer.write(box.getSwItem(i).description());
+                writer.write(box.getSwItem(i).description() + "\n");
             }
             writer.close();
 
